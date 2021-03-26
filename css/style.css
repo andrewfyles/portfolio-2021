@@ -73,15 +73,10 @@ a:active {
     text-decoration: underline;
 }
 
-/* -----header------
-add skip to main content button
-add favicon
-change font family 
-make it clear which page you're on*/
+/* header */
 
 header {
-    /* background: #eee; */
-    background-image: url('/images/momos.jpeg');
+    background-image: url("../images/momos.jpeg");
     background-size: cover;
     padding-bottom: 9em;
 }
@@ -127,7 +122,7 @@ li a.active {
 /* -----favorites----- */
 
 section {
-    background-image: url('/images/texture_pattern.jpg');
+    background-image: url('../images/texture_pattern.jpg');
 
 }
 
@@ -213,7 +208,7 @@ section>h1 {
 /* -----footer----- */
 
 footer {
-    background-image: url('/images/background.png');
+    background-image: url('../images/background.png');
 }
 
 footer-flex {
@@ -262,7 +257,7 @@ footer img {
 
 /* content */
 .about {
-    background-image: url('/images/texture_pattern.jpg');
+    background-image: url('../images/texture_pattern.jpg');
     padding-bottom: 1em;
 }
 
@@ -310,7 +305,7 @@ input[type=text], select, textarea {
   
   .container {
     border-radius: 5px;
-    background-image: url('/images/texture_pattern.jpg');
+    background-image: url('../images/texture_pattern.jpg');
     padding: 20px;
   }
 
@@ -322,7 +317,7 @@ input[type=text], select, textarea {
 
 /* -----JOBS PAGE------ */
 .jobs {
-    background-image: url('/images/texture_pattern.jpg');
+    background-image: url('../images/texture_pattern.jpg');
 }
 
 .jobs h1 {
