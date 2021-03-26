@@ -1,0 +1,336 @@
+/* -------typography-------- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    min-height: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+}
+
+p {
+    font-size: 1rem;
+}
+
+li {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* makes sure blocks of text don't stretch far on big screens */
+h1,
+h2,
+h3,
+p {
+    max-width: 65ch;
+}
+
+/* -----link styling----- */
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #9f040e;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    transition: .3s;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+/* -----header------
+add skip to main content button
+add favicon
+change font family 
+make it clear which page you're on*/
+
+header {
+    /* background: #eee; */
+    background-image: url('/images/momos.jpeg');
+    background-size: cover;
+    padding-bottom: 9em;
+}
+
+nav ul {
+    padding-bottom: 10em;
+    padding-top: 2em;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li a.active {
+    background-color: wheat;
+    text-decoration: underline;
+}
+
+/* -----CTA----- */
+
+.button {
+    background-color: #f9a620;
+    font-size: 1.8rem;
+    border-radius: 100px;
+    width: 60%;
+    height: 12vh;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.button:hover {
+    background-color: rgb(128, 128, 128, .7);
+    transition: .5s;
+}
+
+
+/* -----favorites----- */
+
+section {
+    background-image: url('/images/texture_pattern.jpg');
+
+}
+
+section>h1 {
+    text-align: center;
+    padding: 1em;
+}
+
+.grid-container img {
+    width: 10em;
+    height: 10em;
+    border: 2px solid #104911;
+    border-radius: 4px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.item {
+
+    text-align: center;
+}
+
+.item1 {
+    grid-column: 1/ 2;
+    grid-row: 1/ 1;
+}
+
+.item2 {
+    grid-column: 2/ 2;
+    grid-row: 1/ 1;
+}
+
+.item3 {
+    grid-column: 1/ 1;
+    grid-row: 2/ 2;
+}
+
+.item4 {
+    grid-column: 2/ 2;
+    grid-row: 2/ 2;
+}
+
+.item5 {
+    grid-column: 1/2;
+    grid-row: 3/ 3;
+}
+
+.item6 {
+    grid-column: 2/2;
+    grid-row: 3/ 3;
+}
+
+.item7 {
+    grid-column: 1/2;
+    grid-row: 4/ 4;
+}
+
+.item8 {
+    grid-column: 2/2;
+    grid-row: 4/ 4;
+}
+
+.item9 {
+    grid-column: 1/2;
+    grid-row: 5/ 5;
+}
+
+.item10 {
+    grid-column: 2/2;
+    grid-row: 5 / 5;
+}
+
+
+
+
+/* -----footer----- */
+
+footer {
+    background-image: url('/images/background.png');
+}
+
+footer-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+    padding: 1em;
+    color: #000;
+}
+
+footer ul {
+    padding: 1em;
+}
+
+footer img {
+    width: 2em;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1em;
+}
+
+ 
+.about p {
+    text-align: center;
+}
+
+.owner-img {
+    margin: auto;
+} 
+
+/* ------------ABOUT PAGE------------ */
+
+/* ------header----- */
+.about-header nav ul {
+    padding-bottom: 0;
+}
+
+/* content */
+.about {
+    background-image: url('/images/texture_pattern.jpg');
+    padding-bottom: 1em;
+}
+
+.about p {
+    padding: 0 1em;
+}
+
+.about h1 {
+    text-align: center;
+    padding: 1em;
+}
+
+.about .flex-container img {
+    border: 2px solid #104911;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+/* ------CONTACT PAGE------ */
+
+/* form */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #f9a620;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-image: url('/images/texture_pattern.jpg');
+    padding: 20px;
+  }
+
+  .container h1 {
+      text-align: center;
+      padding-bottom: 1em;
+  }
+
+
+/* -----JOBS PAGE------ */
+.jobs {
+    background-image: url('/images/texture_pattern.jpg');
+}
+
+.jobs h1 {
+    text-align: center;
+    padding: 1em;
+}
+
+.hiring-list {
+    list-style-type: disc;
+    padding-bottom: 1.5em;
+}
