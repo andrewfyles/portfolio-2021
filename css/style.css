@@ -2,6 +2,10 @@
 * {
     box-sizing: border-box;
 }
+/* FROM HW5 */
+*:focus {
+    border: 2px dashed;
+  }
 
 html {
     height: 100%;
@@ -12,7 +16,10 @@ body {
     line-height: 1.5;
     color: #000;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 
 h1,
 h2,
@@ -22,6 +29,7 @@ h3 {
 
 p {
     font-size: 1rem;
+    margin-bottom: 1em;
 }
 
 li {
@@ -73,6 +81,30 @@ a:active {
     text-decoration: underline;
 }
 
+/* Skip to main Content ALL RIGHTS TO COLLEEN VAN LENT (HOMEWORK 5)*/
+
+.skip a{
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top:-50px;
+}
+
+
+.skip a:focus {
+    background: white;
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: 10px    ;
+  }
+
 /* header */
 
 header {
@@ -96,6 +128,25 @@ nav ul {
 li a.active {
     background-color: wheat;
     text-decoration: underline;
+}
+
+.navlist {
+    display: flex;
+    flex-direction: column;
+}
+
+/* tablet header */
+
+@media screen and (min-width: 600px) {
+    .navlist {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navlist li {
+        padding: 0 3em;
+    }
+
 }
 
 /* -----CTA----- */
@@ -148,7 +199,6 @@ section>h1 {
 }
 
 .item {
-
     text-align: center;
 }
 
@@ -202,8 +252,122 @@ section>h1 {
     grid-row: 5 / 5;
 }
 
+/* tablet favorites */
 
+@media screen and (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3em;
+    }
 
+    .item {
+        text-align: center;
+    }
+    
+    .item1 {
+        grid-column: 1/2;
+        grid-row: 1/1;
+    }
+    
+    .item2 {
+        grid-column: 1/2;
+        grid-row: 2/2;
+    }
+    
+    .item3 {
+        grid-column: 2/3;
+        grid-row: 1/1;
+    }
+    
+    .item4 {
+        grid-column: 2/3;
+        grid-row: 2/2;
+    }
+    
+    .item5 {
+        grid-column: 3/4;
+        grid-row: 1/1;
+    }
+    
+    .item6 {
+        grid-column: 3/4;
+        grid-row: 2/2;
+    }
+
+    .item7 {
+        grid-column: 1/2;
+        grid-row: 3/3;
+    }
+    
+    .item8 {
+        grid-column: 1/2;
+        grid-row: 4/4;
+    }
+    
+    .item9 {
+        grid-column: 2/3;
+        grid-row: 3/3;
+    }
+    
+    .item10 {
+        grid-column: 2/3;
+        grid-row: 4/4;
+    }
+
+    .item11 {
+        grid-column: 3/4;
+        grid-row: 3/3;
+    }
+
+    .item12 {
+        grid-column: 3/4;
+        grid-row: 4/4;
+    }
+
+    .item13 {
+        grid-column: 1/2;
+        grid-row: 5/5;
+    }
+
+    .item14 {
+        grid-column: 1/2;
+        grid-row: 6/6;
+    }
+
+    .item15 {
+        grid-column: 2/3;
+        grid-row: 5/5;
+    }
+
+    .item16 {
+        grid-column: 2/3;
+        grid-row: 6/6;
+    }
+
+    .item17 {
+        grid-column: 3/4;
+        grid-row: 5/5;
+    }
+
+    .item18 {
+        grid-column: 3/4;
+        grid-row: 6/6;
+    }
+
+    .item19 {
+        grid-column: 1/2;
+        grid-row: 7/7;
+    }
+
+    .item20 {
+        grid-column: 1/2;
+        grid-row: 8/8;
+    }
+}
 
 /* -----footer----- */
 
@@ -211,13 +375,15 @@ footer {
     background-image: url('../images/background.png');
 }
 
-footer-flex {
-    display: flex;
-    flex-direction: row;
+.footer-flex {
+    margin-top: auto;
     width: 100%;
-    left: 0;
     bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
 }
+
 
 footer p {
     text-align: center;
@@ -248,6 +414,9 @@ footer img {
     margin: auto;
 } 
 
+
+
+
 /* ------------ABOUT PAGE------------ */
 
 /* ------header----- */
@@ -263,6 +432,11 @@ footer img {
 
 .about p {
     padding: 0 1em;
+    text-align: center;
+}
+
+.item-1 {
+    margin-bottom: 1em;
 }
 
 .about h1 {
@@ -274,6 +448,15 @@ footer img {
     border: 2px solid #104911;
     border-radius: 4px;
     margin-bottom: 1em;
+}
+
+/* tablet about page */
+
+@media screen and (min-width:600px) {
+    .about p {
+        padding: 0 1em;
+        text-align: left;
+    }
 }
 
 /* ------CONTACT PAGE------ */
@@ -328,4 +511,8 @@ input[type=text], select, textarea {
 .hiring-list {
     list-style-type: disc;
     padding-bottom: 1.5em;
+}
+
+.hiring-list li {
+    padding: 1em;
 }
